@@ -5,4 +5,3 @@ class Passenger:
         self.passport_no = passport_no
         self.gender = gender
         self.age = int(age)
-
