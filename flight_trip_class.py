@@ -10,4 +10,7 @@ class Flight_Trip:
         self.plane = Plane
         self.passengers = []
 
-    def add_passenger(self):
+    def add_passenger(self, passenger):
+        self.passengers.append(passenger)
+        print(f'{passenger} has been added to the flight')
+

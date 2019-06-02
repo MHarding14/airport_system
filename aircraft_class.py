@@ -1,7 +1,6 @@
 class Aircraft:
 
-    def __init__(self, colour = ''):
-        self.colour = colour
+    def __init__(self):
         self.working = True
         self.passenger_aircraft = True
 
