@@ -5,10 +5,10 @@ from plane_class import Plane
 class Flight_Trip:
 
     def __init__(self, num, origin, destination, plane):
-        self.flight_num = num
-        self.origin = origin
-        self.destination = destination
-        self.plane = plane
+        self.flight_num = ''
+        self.origin = ''
+        self.destination = ''
+        self.plane = ''
         self.passengers = []
 
     def add_passenger(self, passenger):
