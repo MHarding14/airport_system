@@ -4,10 +4,11 @@ from plane_class import Plane
 
 class Flight_Trip:
 
-    def __init__(self, origin, destination, Plane,):
+    def __init__(self, num, origin, destination, plane):
+        self.flight_num = num
         self.origin = origin
         self.destination = destination
-        self.plane = Plane
+        self.plane = plane
         self.passengers = []
 
     def add_passenger(self, passenger):

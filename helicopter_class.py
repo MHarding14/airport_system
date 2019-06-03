@@ -1,11 +1,13 @@
 from aircraft_class import Aircraft
 
-class Plane(Aircraft):
+class Helicopter(Aircraft):
 
     def __init__(self, name, capacity, colour = ''):
-        super().__init__()
         self.colour = colour
         self.name = name
-        self.wings = 2
+        self.blades = 4
         self.capacity = capacity
+
+    def hover(self):
+        return("Look, I'm going nowhere...")
 
