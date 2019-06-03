@@ -54,11 +54,45 @@ def test_create_plane():
 
 #-----------Flight_trips--------
 # I can create a flight with no specific information
+def test_create_flight():
+    test_flight = Flight_Trip()
 
+    assert isinstance (test_flight, Flight_Trip)
 
 # I can add a plane to the flight
-# I can add a destination
-# I can add an origin
-# I can add a passenger to the passengers list
-# Passenger list is a list of objects that are passengers
+def test_add_plane():
+    test_flight = Flight_Trip()
+    test_plane = Plane('Test Plane')
+    test_flight.add_plane(test_plane)
 
+    assert test_flight.plane == test_plane
+# I can add a destination
+def test_add_destination():
+    test_flight = Flight_Trip()
+    test_flight.add_destination('Madrid')
+
+    assert test_flight.destination == 'Madrid'
+# I can add an origin
+def test_add_origin():
+    test_flight = Flight_Trip()
+    test_flight.add_origin('Heathrow')
+
+    assert test_flight.origin == 'Heathrow'
+
+# I can add a passenger to the passengers list
+def test_add_passenger():
+    test_flight = Flight_Trip()
+    test_passenger = Passenger('Tester', 92847365, 'Male', 26)
+    test_flight.add_passenger(test_passenger)
+
+    assert test_flight.passengers[-1].name == test_passenger.name
+
+# Passenger list is a list of objects that are passengers
+def test_passengers_list():
+    test_flight = Flight_Trip()
+    test_passenger1 = Passenger('Tester1', 92847366, 'Male', 27)
+    test_passenger2 = Passenger('Tester2', 92847367, 'Male', 28)
+    test_flight.add_passenger(test_passenger1)
+    test_flight.add_passenger(test_passenger2)
+
+    assert type(test_flight.passengers) == list
