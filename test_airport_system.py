@@ -9,27 +9,26 @@ import pytest
 # Create with a name and Passport number
 # I can create 'Joanna Thompson' with passport no. 87235731
 # I can create 'Burt Kuman' with passport no. 78925146
+test_passenger = Passenger('Tester', 92847365, 'Male', 26)
+test_passenger1 = Passenger('Tester1', 92847366, 'Male', 27)
+test_passenger2 = Passenger('Tester2', 92847367, 'Male', 28)
 
 def test_passenger_create():
-    assert isinstance (matt, Passenger)
+    assert isinstance (test_passenger1, Passenger)
 
 def test_passengers1():
-    name = 'Vanessa Harding'
-    passport_no = 74652981
 
-    assert [Passenger.passenger_instances[-3].name, Passenger.passenger_instances[-3].passport_no] == [name, passport_no]
+    assert [test_passenger1.name, test_passenger1.passport_no] == ['Tester1', 92847366]
 
 def test_passengers2():
-    name = 'Joanna Thompson'
-    passport_no = 87235731
+    joanna = Passenger('Joanna Thompson', 87235731, 'Female', 83)
 
-    assert [Passenger.passenger_instances[-2].name, Passenger.passenger_instances[-2].passport_no] == [name, passport_no]
+    assert [joanna.name, joanna.passport_no] == ['Joanna Thompson', 87235731]
 
 def test_passengers3():
-    name = 'Burt Kuman'
-    passport_no = 78925146
+    burt = Passenger('Burt Kuman', 78925146, 'Male', 43)
 
-    assert [Passenger.passenger_instances[-1].name, Passenger.passenger_instances[-1].passport_no] == [name, passport_no]
+    assert [burt.name, burt.passport_no] == ['Burt Kuman', 78925146]
 
 # I get an error if passenger is created without name or passport number
         # Test for it breaking!
@@ -44,11 +43,7 @@ def test_create_plane():
 
     jumbo_jet = Plane('Jumbo Jet', 900, 'multi-colour')
 
-    name = 'Jumbo Jet'
-    capacity = 900
-    colour = 'multi-colour'
-
-    assert [Plane.plane_instances[-1].name, Plane.plane_instances[-1].capacity, Plane.plane_instances[-1].colour] == [name, capacity, colour]
+    assert [jumbo_jet.name, jumbo_jet.capacity, jumbo_jet.colour] == ['Jumbo Jet', 900, 'multi-colour']
 
 
 
@@ -82,7 +77,6 @@ def test_add_origin():
 # I can add a passenger to the passengers list
 def test_add_passenger():
     test_flight = Flight_Trip()
-    test_passenger = Passenger('Tester', 92847365, 'Male', 26)
     test_flight.add_passenger(test_passenger)
 
     assert test_flight.passengers[-1].name == test_passenger.name
@@ -90,8 +84,6 @@ def test_add_passenger():
 # Passenger list is a list of objects that are passengers
 def test_passengers_list():
     test_flight = Flight_Trip()
-    test_passenger1 = Passenger('Tester1', 92847366, 'Male', 27)
-    test_passenger2 = Passenger('Tester2', 92847367, 'Male', 28)
     test_flight.add_passenger(test_passenger1)
     test_flight.add_passenger(test_passenger2)
 

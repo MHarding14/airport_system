@@ -25,9 +25,6 @@ scott = Passenger('Scott Williams', 63926178, 'Male', 45)
 print(scott.name)
 vanessa = Passenger('Vanessa Harding', 74652981, 'Female', 59)
 print(vanessa.name)
-joanna = Passenger('Joanna Thompson', 87235731, 'Female', 83)
-burt = Passenger('Burt Kuman', 78925146, 'Male', 43)
-print(burt)
 print('--------------------------------')
 
 
