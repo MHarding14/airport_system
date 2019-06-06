@@ -1,3 +1,4 @@
+import pyodbc
 class Passenger:
 
     passenger_instances = []
